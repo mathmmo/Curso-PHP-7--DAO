@@ -1,10 +1,25 @@
 <?php
 require_once("config.php");
 
-$sql = new Sql();
+$matheus = new Usuario();
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$matheus->loadById(2);
 
-echo json_encode($usuarios);
+echo $matheus;
 
+echo "<br><br>===================================================<br><br>";
+
+$lucas = new Usuario();
+
+$lucas->loadById(3);
+
+echo $lucas;
+
+echo "<br><br>===================================================<br><br>";
+
+$root = new Usuario();
+
+$root->loadById(7);
+
+echo $root;
 ?>
